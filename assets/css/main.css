@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  background: #171717 url('../img/background.jpeg') no-repeat center;
+  background-size: contain; /* Ensure the background image covers the entire page */
+  border: 2px solid black;
+  box-sizing: border-box;
+  color: #B33F40; /* Set text color to #B33F40 */
+}
+
+.Home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 70px 10% 0;
+}
+
+.intro h2,
+.intro h3 {
+  font-weight: normal; /* Set font weight to normal for all headings */
+}
+
+.intro h2:first-line,
+.intro h3:first-line {
+  font-weight: bold; /* Set font weight to bold for the first line of each heading */
+}
+
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  z-index: 111;
+  background-color: #171717; /* Header background color */
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--primary-color);
+  letter-spacing: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+
+.navItems {
+  display: flex;
+}
+
+.navItems li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+.navItems li a {
+  font-size: 18px;
+  color: var(--primary-color);
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  text-decoration: none;
+  position: relative; /* Added for positioning the underline */
+}
+
+.navItems li a:hover,
+.navItems li a.active {
+  color: var(--accent-color);
+}
+
+.navItems li a.active::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: var(--accent-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.Home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 70px 10% 0;
+}
+.profile-picture {
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes the image circular */
+  overflow: hidden; /* Clips the image to the border radius */
+  margin-right: 20px; /* Add spacing between picture and text */
+  border: 2px solid #B33F40; /* Adds a border of color #B33F40 */
+}
+
+
+.profile-picture img {
+  width: 100%; /* Ensures the image fills the circular frame */
+  height: 100%; /* Ensures the image fills the circular frame */
+  object-fit: cover; /* Scales the image to cover the entire frame */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navItems {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navItems li {
+    margin: 10px 0;
+  }
+}
+
+/* Color Palette Variables */
+:root {
+  --primary-color: #3d535f;
+  --accent-color: #B33F40;
+}
